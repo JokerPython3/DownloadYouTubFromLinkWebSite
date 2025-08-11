@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> Download</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="download-page">
+    <header class="top">
+      <h1> Download Vidoe</h1>
+      <p class="subtitle">choice </p>
+    </header>
+
+    <section class="card">
+      <div class="media">
+
+        <div class="video-wrap">
+          <video id="player" src="{{ksj.s}}" controls playsinline preload="metadata"></video>
+        </div>
+      </div>
+
+      <div class="meta">
+        <h2 class="title">{{ ksj.title or  "ksj" }}</h2>
+        <p class="info">size : <span id="filesize">{{ ksj.filesize or 'ه' }}</span></p>
+
+        <div class="actions">
+
+          <a id="downloadLink" href="{{ksj.s}}" download="{{ ksj.title | default('video') }}.mp4" class="btn primary">download</a>
+          <button id="copyBtn" class="btn">copy link</button>
+          <a id="openBtn" href="{{ksj.s}}" target="_blank" rel="noopener" class="btn ghost">open a new tap</a>
+        </div>
+
+        <div id="progress" class="progress" aria-hidden="true">
+          <div class="progress-bar" style="width:0%"></div>
+        </div>
+
+        <p class="note">hhhh</p>
+      </div>
+    </section>
+
+    <footer class="footer">&copy; {{ now().year }} </footer>
+  </main>
+
+  <script src="/static/down.js"></script>
+</body>
+</html>
