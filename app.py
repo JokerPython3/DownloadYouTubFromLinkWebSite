@@ -19,7 +19,7 @@ async def download(request: Request, link: str = Form(...)):
     return temp.TemplateResponse("down.html", {
         "request": request,
         "ksj": video_data,
-        "now": datetime.now
+        "now": datetime.now()
     })
 
 @app.head("/download")

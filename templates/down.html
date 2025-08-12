@@ -17,7 +17,7 @@
       <div class="media">
 
         <div class="video-wrap">
-          <video id="player" src="{{ksj.s}}" controls playsinline preload="metadata"></video>
+          <video id="player" src="{{ ksj.s | urlencode }}" controls playsinline preload="metadata"></video>
         </div>
       </div>
 
@@ -40,7 +40,7 @@
       </div>
     </section>
 
-    <footer class="footer">&copy; {{ now().year }} </footer>
+    <footer class="footer">&copy; {{ now.year }} </footer>
   </main>
 
   <script src="/static/down.js"></script>

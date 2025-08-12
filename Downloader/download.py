@@ -7,7 +7,7 @@ class Downloads:
 
     def ksj(self):
         options = {
-            "format": "mp4",
+            "format": "mp4/best",
             "outtmpl": "downloads/%(title)s.%(ext)s",
             "noplaylist": True,
         }

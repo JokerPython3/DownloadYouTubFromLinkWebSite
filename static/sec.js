@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
     const ytRegex = /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\/.+$/;
-
-    if (!ytRegex.test(url)) {
+    const ttRegex = /^(https?:\/\/)?(www\.)?tiktok\.com\/.+$/;
+    if (!ytRegex.test(url) && !ttRegex.test(url)) {
       e.preventDefault();
       alert("ksj");
     }
